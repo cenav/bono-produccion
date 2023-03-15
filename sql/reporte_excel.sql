@@ -5,4 +5,5 @@ select b.descripcion as dsc_bono, d.fecha_del, d.fecha_al, p.id_personal, p.nomb
        join vw_proceso_bono_obrero_pers p
             on d.id_proceso = p.id_proceso
               and d.id_item = p.id_item
+ where d.id_proceso = 80
  order by b.orden_reporte, p.orden_reporte, p.nombre;
